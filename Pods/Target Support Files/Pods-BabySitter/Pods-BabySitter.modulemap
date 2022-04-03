@@ -1,0 +1,6 @@
+framework module Pods_BabySitter {
+  umbrella header "Pods-BabySitter-umbrella.h"
+
+  export *
+  module * { export * }
+}
