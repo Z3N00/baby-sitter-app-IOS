@@ -38,6 +38,7 @@
 		5D14AF3727E49949003B37D3 /* UIStoryBoard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14AF2D27E49948003B37D3 /* UIStoryBoard+Extension.swift */; };
 		5D14AF3827E49949003B37D3 /* StringFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14AF2E27E49948003B37D3 /* StringFile.swift */; };
 		5D237F5A27E65979000264B3 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D237F5927E65979000264B3 /* AddItemVC.swift */; };
+		5D6D389827F627FA001D480D /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D389727F627FA001D480D /* ChatListVC.swift */; };
 		5D82225727E75B3100BDEBE6 /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D82225627E75B3100BDEBE6 /* CheckOutVC.swift */; };
 		5D82225927E75F4F00BDEBE6 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D82225827E75F4E00BDEBE6 /* Poppins-Regular.ttf */; };
 		5D82225B27E762B600BDEBE6 /* ConfirmBookingPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D82225A27E762B600BDEBE6 /* ConfirmBookingPopup.swift */; };
@@ -66,6 +67,7 @@
 		DB51D9CA27E7C00A00DC10A7 /* TTGSnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51D9C927E7C00A00DC10A7 /* TTGSnackBar.swift */; };
 		DB6A745127E7C94F00BDDE56 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A745027E7C94F00BDDE56 /* ForgotPasswordVC.swift */; };
 		DB6A745427E7CBBF00BDDE56 /* AppleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A745327E7CBBF00BDDE56 /* AppleSignIn.swift */; };
+		DB74223627F9C915004C51B9 /* InboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74223527F9C915004C51B9 /* InboxVC.swift */; };
 		DB8EA6DF27F0D91D00B4F525 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8EA6DE27F0D91D00B4F525 /* UserModel.swift */; };
 		DB8EA6E127F0DB6000B4F525 /* HomeNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8EA6E027F0DB6000B4F525 /* HomeNav.swift */; };
 		DB8EA6E327F0DB7000B4F525 /* AuthNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8EA6E227F0DB7000B4F525 /* AuthNav.swift */; };
@@ -111,6 +113,7 @@
 		5D14AF2D27E49948003B37D3 /* UIStoryBoard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard+Extension.swift"; sourceTree = "<group>"; };
 		5D14AF2E27E49948003B37D3 /* StringFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFile.swift; sourceTree = "<group>"; };
 		5D237F5927E65979000264B3 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
+		5D6D389727F627FA001D480D /* ChatListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListVC.swift; sourceTree = "<group>"; };
 		5D82225627E75B3100BDEBE6 /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
 		5D82225827E75F4E00BDEBE6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		5D82225A27E762B600BDEBE6 /* ConfirmBookingPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmBookingPopup.swift; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 		DB6A745027E7C94F00BDDE56 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		DB6A745227E7CBB000BDDE56 /* BabySitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BabySitter.entitlements; sourceTree = "<group>"; };
 		DB6A745327E7CBBF00BDDE56 /* AppleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignIn.swift; sourceTree = "<group>"; };
+		DB74223527F9C915004C51B9 /* InboxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxVC.swift; sourceTree = "<group>"; };
 		DB8EA6DE27F0D91D00B4F525 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DB8EA6E027F0DB6000B4F525 /* HomeNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNav.swift; sourceTree = "<group>"; };
 		DB8EA6E227F0DB7000B4F525 /* AuthNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNav.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 				DB8EA6E227F0DB7000B4F525 /* AuthNav.swift */,
 				DBAB145227F39CA3004DC916 /* BookingVC.swift */,
 				DBAB145427F39FFA004DC916 /* SitterNav.swift */,
+				5D6D389727F627FA001D480D /* ChatListVC.swift */,
+				DB74223527F9C915004C51B9 /* InboxVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				5D88368F27E4A63200BF3DBA /* SignInVC.swift in Sources */,
 				DBB30D6727F260450092D623 /* NootificationModel.swift in Sources */,
 				5D14AF3827E49949003B37D3 /* StringFile.swift in Sources */,
+				DB74223627F9C915004C51B9 /* InboxVC.swift in Sources */,
 				5D14AF3127E49949003B37D3 /* UIViewController+Extensions.swift in Sources */,
 				DB3B6C0127F0A57400CFFD76 /* GFunction.swift in Sources */,
 				5D88369827E4B67000BF3DBA /* LoginVC.swift in Sources */,
@@ -476,6 +483,7 @@
 				5D82225D27E767E700BDEBE6 /* ProfileVC.swift in Sources */,
 				DB3B6C0B27F0AF1100CFFD76 /* UIView+Extension.swift in Sources */,
 				DB6A745427E7CBBF00BDDE56 /* AppleSignIn.swift in Sources */,
+				5D6D389827F627FA001D480D /* ChatListVC.swift in Sources */,
 				5D237F5A27E65979000264B3 /* AddItemVC.swift in Sources */,
 				5D14AF1327E497A5003B37D3 /* SceneDelegate.swift in Sources */,
 				DB8EA6DF27F0D91D00B4F525 /* UserModel.swift in Sources */,
@@ -629,9 +637,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BabySitter/BabySitter.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BabySitter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -648,7 +655,6 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BabySitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -662,9 +668,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BabySitter/BabySitter.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BabySitter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -681,7 +686,6 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BabySitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
