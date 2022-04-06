@@ -82,7 +82,7 @@ extension BookingVC: UITableViewDelegate,UITableViewDataSource {
     
     
     func getData() {
-        _ = AppDelegate.shared.db.collection(bBooking).whereField(bSitterId, isEqualTo: /*GFunction.user.email*/"rutu@grr.la").addSnapshotListener{ querySnapshot, error in
+        _ = AppDelegate.shared.db.collection(bBooking).whereField(bEmail, isEqualTo: GFunction.user.email).addSnapshotListener{ querySnapshot, error in
             
             guard let snapshot = querySnapshot else {
                 print("Error fetching snapshots: \(error!)")
