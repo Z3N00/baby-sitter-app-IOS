@@ -19,10 +19,25 @@ class ChatScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }else {
             return 0
         }
-    }
+
+class MessageModel{
+    var msg: String!
+    var userType: MessageUser!
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    init(msg: String,userType: MessageUser){
+        self.msg = msg
+        self.userType = userType
+    }
+}
+
+enum MessageUser{
+    case sender
+    case receiver
+}
+
+class ChatScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.arrChat.count
         
         let array :  [Dictionary<String,Any>] = dictMsg.value(forKey:arrSort[indexPath.section] ) as! [Dictionary<String, Any>]
         let isSitter : Bool = array[indexPath.row][bIsSitter] as! Bool
@@ -54,14 +69,25 @@ class ChatScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             cell.selectionStyle = .none
             return cell
         }
+        let data = self.arrChat[indexPath.row]
+        if data.userType == MessageUser.sender {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SenderCell") as! SenderCell
+            cell.lblMessage.text = data.msg
+            //cell.configCell(data: self.arraySideMenuItems[indexPath.row])
+            cell.selectionStyle = .none
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverCell") as! ReceiverCell
+        cell.lblMessage.text = data.msg
+        //cell.configCell(data: self.arraySideMenuItems[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
     }
     
 
     
     @IBOutlet weak var tblChat: UITableView!
     @IBOutlet weak var vwText: UIView!
-    @IBOutlet weak var imgProfile: UIImageView!
-    @IBOutlet weak var tvMsg: UITextView!
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var lblName: UILabel!
     
@@ -86,12 +112,23 @@ class ChatScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         if let isSitter = GFunction.user.isSitter as? Bool {
             self.isSitterData = isSitter
         }
+    @IBOutlet weak var tvMsg: UITextView!
+    @IBOutlet weak var btnSend: UIButton!
+    
+    
+    
+    var arrChat = [MessageModel]()
+    
+    
+    func setUPChat() {
+        self.arrChat.append(MessageModel(msg: "Hello", userType: .sender))
+        self.arrChat.append(MessageModel(msg: "Hey Buddy", userType: .receiver))
+        self.arrChat.append(MessageModel(msg: "How are you?", userType: .receiver))
+        self.arrChat.append(MessageModel(msg: "Good", userType: .sender))
     }
     
     
-    @IBAction func sendMessage(_ sender: UIButton) {
-        if !(self.tvMsg.text.trim().isEmpty || self.tvMsg.text.trim() == "Write here..".trim()){
-            self.sendMessage(msg: self.tvMsg.text, senderName: self.arrRecentChatData[0][bSenderName] as! String, senderID: self.arrRecentChatData[0][bSenderID] as! String, receiverName: self.arrRecentChatData[0][bReceiverName] as! String, receiverID: self.arrRecentChatData[0][bReceiverID] as! String, isSitter: self.isSitterData, chatID: self.arrRecentChatData[0][bChatID] as! String, location: self.arrRecentChatData[0][bLocation] as! String)
+            self.arrChat.append(MessageModel(msg: self.tvMsg.text,userType: .receiver))
         }
         self.tvMsg.text = "Write here.."
         self.tblChat.reloadData()
@@ -128,6 +165,9 @@ class ReceiverCell: UITableViewCell {
     @IBOutlet weak var vwCell: UIView!
     @IBOutlet weak var vwText: UIView!
 
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         vwText.cornerRadius(cornerRadius: 10.0, clips: true)

@@ -13,6 +13,8 @@ class AvailabilityVC: UIViewController {
     //MARK:- Outlet
     @IBOutlet weak var startDateCalendar: FSCalendar!
     
+    @IBOutlet weak var endDateCalendar: FSCalendar!
+    
     //MARK:- Class Variable
     var data: SitterModel!
     
@@ -24,7 +26,8 @@ class AvailabilityVC: UIViewController {
         self.startDateCalendar.delegate = self
         self.startDateCalendar.dataSource = self
         
-        self.calendarSetup()
+        self.endDateCalendar.delegate = self
+        self.endDateCalendar.dataSource = self
     }
     
     func applyStyle(){
